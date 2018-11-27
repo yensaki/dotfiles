@@ -1,0 +1,1 @@
+export PATH=/Users/saki/.pyenv/shims:/usr/local/opt/imagemagick@6/bin:/usr/local/opt/mysql@5.6/bin:/Users/saki/.yarn/bin:/Users/saki/.nodenv/bin:/Users/saki/.rbenv/shims:/Users/saki/.nodenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin

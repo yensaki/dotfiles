@@ -1,8 +1,9 @@
 export PATH=$PATH:${HOME}/blender/blender.app/Contents/MacOS
+export PATH=$PATH:/Applications/Google\ Chrome\ Canary.app/Contents/MacOS
+export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:/usr/local/bin
 export PATH=$PATH:/usr/bin:/bin:/usr/sbin:
 export PATH=$PATH:/sbin
-export PATH=$PATH:/usr/local/go/bin
 export PATH="$HOME/.yarn/bin:$PATH"
 export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
 export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
@@ -10,6 +11,7 @@ export PATH=${HOME}/.rbenv/shims:$PATH
 export PATH=${HOME}/.nodenv/bin:$PATH
 export PATH=${HOME}/.goenv/shims:$PATH
 export PATH=${HOME}/.pyenv/shims:$PATH
+export PATH=${HOME}/.poetry/bin:$PATH
 export PATH="$PATH:`yarn global bin`"
 
 eval "$(rbenv init -)"
@@ -36,6 +38,10 @@ alias ll='ls -l --color=auto'
 alias so='source'
 alias v='vim'
 alias vi='vim'
+alias k='kubectl'
+alias dcb='docker-compose build'
+alias dcu='docker-compose up'
+alias dcr='docker-compose run'
 
 setopt share_history
 
@@ -78,3 +84,15 @@ function peco-select-history() {
 zle -N peco-select-history
 bindkey '^R' peco-select-history
 
+export FLASK_ENV=development
+export GOOGLE_APPLICATION_CREDENTIALS=${HOME}/.config/gcloud/application_default_credentials.json
+
+export CFLAGS="-I/usr/local/Cellar/openssl/1.0.2s/include"
+export LDFLAGS="-L/usr/local/Cellar/openssl/1.0.2s/lib"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/saki/.gcloud/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/saki/.gcloud/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/saki/.gcloud/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/saki/.gcloud/google-cloud-sdk/completion.zsh.inc'; fi
+export PATH=/usr/local/Cellar/openssl@1.1/1.1.1g/bin:$PATH

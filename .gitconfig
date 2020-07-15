@@ -1,0 +1,20 @@
+[user]
+	name = yensaki
+[core]
+	editor = vim -c \"set fenc=utff-8\"
+	precomposeunicode = true
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+[push]
+	default = simple
+[alias]
+	openpr = "!f() { hub browse -- `git log --merges --oneline --reverse --ancestry-path $1...master | grep 'Merge pull request #' | head -n 1 | cut -f5 -d' ' | sed -e 's%#%pull/%'`; }; f"
+  sed =  "!f () { git grep -lP $1 | xargs sed -i '' -e s/$1/$2/g; }; f"
+  cnv = commit --no-verify
+  rebasei = "!f () { git rebase -i HEAD~$1; }; f"
+  st = status
+  co = checkout
+  sweep = "!f() { git checkout master && git branch --merged | grep -v '*' | xargs -I % git branch -d %; }; f"
+

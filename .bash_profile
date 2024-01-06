@@ -3,7 +3,6 @@ export PATH=$PATH:${HOME}/blender
 export GOPATH="$HOME/.go"
 
 export PATH="$HOME/.yarn/bin:$PATH"
-export PATH="$HOME/pixiv/factory/vendor/go-factory/bin:$PATH"
 export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
 export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
 export PATH=${HOME}/.rbenv/shims:$PATH
